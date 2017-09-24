@@ -6,12 +6,12 @@ package restaurant.demo;
  */
 
 public class Host {
-	String categories;
-	String item_name;
-	void category() {
+	String host_id;
+	String host_name;
+	void receive() {
 	
 	}
-	void items_list() {
+	void allot() {
 	}
 
 }
