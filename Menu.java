@@ -4,8 +4,7 @@
 package restaurant.demo;
 
 /**
- * @author Ashwith
- *
+ *The menu categories and items of the menu are explored here
  */
 public class Menu {
 	String categories;
