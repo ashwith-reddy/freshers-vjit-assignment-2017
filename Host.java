@@ -1,17 +1,27 @@
-package restaurant.demo;
-
-/**
- *The host willperform his responsibilities
- *Further it will be updated
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 
-public class Host {
-	String host_id;
-	String host_name;
-	void receive() {
-	
-	}
-	void allot() {
-	}
 
+
+package restaurant_management_system;
+
+/**
+ *
+ * @author Ashwith
+ */
+public class Host extends Restaurant_Management_System {
+   
+           int req_chairs;
+    void receive(){
+    System.out.println(".......................... HOST :  WELCOME SIR ,HOW MANY PEOPLE SIR?...............................");
+
+    
+    }
+   
+    
+    
+    
 }

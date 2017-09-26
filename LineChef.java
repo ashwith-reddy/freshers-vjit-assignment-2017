@@ -9,6 +9,6 @@ package restaurant_management_system;
  *
  * @author Ashwith
  */
-public class BusBoy {
+public class LineChef {
     
 }
