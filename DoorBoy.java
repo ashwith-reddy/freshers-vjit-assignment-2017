@@ -11,11 +11,9 @@ package restaurant_management_system;
  */
 public class DoorBoy extends Restaurant_Management_System  {
     char wish;
-    void greeting()
+    void entrance_greeting()
     {
-        if (wish=='Y')
-        System.out.println(".................................WELCOME................................");
-        System.out.println("...............Customer Enters In To Restaurant...........................");
+        System.out.println("\t\t\t\t\t.................................WELCOME SIR................................\n\n\n");
     }
     
 }

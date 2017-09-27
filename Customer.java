@@ -18,7 +18,7 @@ public class Customer extends Restaurant_Management_System {
     String order=" ";
     
     
-     public char enter(){
+     /*public char enter(){
          System.out.println("...................Do customer wants to enter??.................");
          System.out.println("...................If yes enter Y/y  else N/n.................");
         Scanner sc = new Scanner(System.in);
@@ -39,10 +39,10 @@ public class Customer extends Restaurant_Management_System {
       return choice ;
 
  }
-     
+     */
      void look(){
-         System.out.println(" Customer gives the order" ); 
-       System.out.println(" number of items to order:" );
+         System.out.println(" \t\t\tCustomer gives the order\n\n" ); 
+       System.out.println(" \t\t\tnumber of items to order by customer:" );
       Scanner sc = new Scanner(System.in);
        n = sc.nextInt();
        for(i=0;i<=n;i++)
@@ -52,7 +52,7 @@ public class Customer extends Restaurant_Management_System {
          
           
        }
-      System.out.println("order is :"+order );
+      System.out.println("\torder is :"+order );
        //o(order);
          
          
@@ -67,7 +67,7 @@ public class Customer extends Restaurant_Management_System {
      }
      */
      void eat(){
-                         System.out.println("customer eats the food" );  
+                         System.out.println("\t\t\t\t\tcustomer eats the food\n\n\n\n" );  
 
      }
      

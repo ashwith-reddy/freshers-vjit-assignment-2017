@@ -16,7 +16,7 @@ public class Bill
   int c;
   float b=0;
   float generate(){
-  System.out.println("Manager starts calculating the Bill");
+  System.out.println("\t\t\t\tManager starts calculating the Bill\n");
   Scanner sc = new Scanner(System.in);
     
     
@@ -24,6 +24,8 @@ public class Bill
     choice=sc.next().charAt(0);
         if(choice == 'Y' ||choice == 'y')
         {
+              System.out.println("Enter the code of ordered dish 1.Chilli_paneer 2.Gobi_manchuria 3.Veg_manchuria 4.Chicken_manchuria 5.Chilli_chicken 6.Chicken_65\n");
+
             c = sc.nextInt();
             if(c == 1|| c == 2|| c== 3)
             {
@@ -41,6 +43,8 @@ public class Bill
     choice=sc.next().charAt(0);
         if(choice == 'Y' ||choice == 'y')
         {
+       System.out.println("Enter the code of ordered dish 7.vegetabe_biryani 8.mushroom_biryani 9.chicken_biryani 10.mutton_biryani\n");
+
             c = sc.nextInt();
             if(c == 7)
             {
@@ -61,6 +65,7 @@ public class Bill
     choice=sc.next().charAt(0);
         if(choice == 'Y' ||choice == 'y')
         {
+    System.out.println("Enter the code of ordered dish  11.Double_ka_meetha 12.Kurbani_ka_meetha \n");
             c = sc.nextInt();
             
          if ( c == 11 || c==12){
@@ -75,6 +80,7 @@ public class Bill
     choice=sc.next().charAt(0);
         if(choice == 'Y' ||choice == 'y')
         {
+   System.out.println("Enter the code of ordered dish 13.Coke 14.Thumps_up 15.Sprite 16.Maaza 60  \n");
             c = sc.nextInt();
             
          if ( c == 13 || c==14 || c == 15 || c==16){
@@ -85,8 +91,7 @@ public class Bill
              
         }
          
-         
-          System.out.println("Bill is "+b);
+          System.out.println("\n\n\nBill is "+b);
 
     return b;
   }
