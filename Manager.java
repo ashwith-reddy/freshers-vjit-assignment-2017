@@ -11,4 +11,18 @@ package restaurant_management_system;
  */
 public class Manager {
     
+    void take_order(){
+            System.out.println(" manager takes the order" );  
+
+    }
+    void forward(){
+                System.out.println(" manager forwards the order to kitchen" );  
+
+    }
+    
+    void bill(){
+                        System.out.println(" manager produces bill to the customer" );  
+
+    }
+    
 }

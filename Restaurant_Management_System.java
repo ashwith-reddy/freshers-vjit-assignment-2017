@@ -5,14 +5,16 @@
  */
 package restaurant_management_system;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.NoSuchElementException;
+
 /**
  *
  * @author Ashwith
  */
 
 
-import java.util.Scanner;
-import java.lang.Object;
 
 
 
@@ -26,8 +28,8 @@ public class Restaurant_Management_System {
     
     
     
-    public static void main(String[] args) {
-        //char choice1;
+    public static void main(String[] args)throws FileNotFoundException,IOException,NoSuchElementException{
+         //char choice1;
         int req_chairs,c;
         
         
@@ -45,9 +47,41 @@ public class Restaurant_Management_System {
         
         Table table1 = new Table();
         req_chairs = table1.tables();
-        System.out.println(" Host arranges "+ req_chairs + "  chairs" );  
-
+        System.out.println(" Host arranges "+ req_chairs + "  chairs and leaves" );  
         
+        
+        BusBoy b1= new BusBoy();
+        b1.clean_table();
+        b1.lay_cloth();
+        b1.serve_water();
+        
+        System.out.println(" Manager Comes to table to take order" );  
+        
+        
+        Menu m1 = new Menu(); 
+       m1.display();
+       
+        
+        
+        customer1.look();
+        
+        Manager mngr1 = new Manager();
+        mngr1.take_order();
+        mngr1.forward();
+        
+        ExecutiveChef ec= new ExecutiveChef();
+        ec.assign();
+
+        LineChef lc= new LineChef();
+        lc.prepare();
+        
+        
+        Server s1 = new Server();
+        s1.serve();
+        
+        customer1.eat();
+        mngr1.bill();
+        customer1.pay();
 
         
       

@@ -1,4 +1,4 @@
-vegetabe_biryani 150
-mushroom_biryani 180
-chicken_biryani 180
-mutton_biryani 200
+vegetabe_biryani 100
+mushroom_biryani 120
+chicken_biryani 120
+mutton_biryani 150

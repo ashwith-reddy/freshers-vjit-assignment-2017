@@ -46,4 +46,19 @@ public class Customer {
 
  }
     
+     void look(){
+         System.out.println(" Customer gives the order" );  
+
+     }
+     void eat(){
+                         System.out.println("customer eats the food" );  
+
+     }
+     
+     void pay(){
+                         System.out.println(" customer pays the bill and leaves the restaurant" );  
+
+     }
+     
+     
 }

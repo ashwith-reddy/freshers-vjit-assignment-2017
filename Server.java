@@ -10,5 +10,8 @@ package restaurant_management_system;
  * @author Ashwith
  */
 public class Server {
-    
+    void serve(){
+                        System.out.println(" server takes the prepared food from kitchen and serves to customer" );  
+
+    }
 }

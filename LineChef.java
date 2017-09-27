@@ -10,5 +10,9 @@ package restaurant_management_system;
  * @author Ashwith
  */
 public class LineChef {
+    void prepare(){
+                System.out.println("line chef prepares the ordered food" );  
+
+    }
     
 }

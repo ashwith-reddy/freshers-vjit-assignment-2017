@@ -11,4 +11,9 @@ package restaurant_management_system;
  */
 public class ExecutiveChef {
     
+    void assign(){
+                System.out.println(" ececutive chef looks at order and  assigns work to line  chefs" );  
+
+    }
+    
 }
