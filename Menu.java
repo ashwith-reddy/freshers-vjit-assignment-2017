@@ -13,7 +13,7 @@ public class Menu { static HashMap<String,String> map1 =new HashMap<String,Strin
 
      int choice;
        BufferedReader br = null;
-       System.out.println("Enter Your Choice:\n1.Starters\t2.Main\t3.Desserts");
+       System.out.println("Enter Your Choice:\n1.Starters\t2.Main\t3.Desserts\t4.Beverages");
        Scanner sc = new Scanner(System.in);
        choice = sc.nextInt();
        switch(choice){
@@ -22,6 +22,8 @@ public class Menu { static HashMap<String,String> map1 =new HashMap<String,Strin
             case 2:    br = new BufferedReader(new FileReader("C:\\Users\\Ashwith\\Documents\\NetBeansProjects\\Restaurant_Management_System\\src\\restaurant_management_system\\Main.txt"));
            break;
            case 3:  br = new BufferedReader(new FileReader("C:\\Users\\Ashwith\\Documents\\NetBeansProjects\\Restaurant_Management_System\\src\\restaurant_management_system\\desserts.txt"));
+           break;
+           case 4:  br = new BufferedReader(new FileReader("C:\\Users\\Ashwith\\Documents\\NetBeansProjects\\Restaurant_Management_System\\src\\restaurant_management_system\\beverages.txt"));
            break;
           }
        
@@ -34,7 +36,7 @@ public class Menu { static HashMap<String,String> map1 =new HashMap<String,Strin
             while(token.hasMoreTokens()){
                 token1 = token.nextToken();
                 token2 = token.nextToken();
-                System.out.println("\nToken1 :" + token1 +"\t" + "Token2 :" + token2);
+                System.out.println("\nItem :" + token1 +"\t" + "Rate :" + token2);
             }
         map1.put(token1,token2);
     }
