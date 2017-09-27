@@ -11,36 +11,27 @@ import java.util.Scanner;
  *
  * @author Ashwith
  */
-public class Customer {
+public class Customer extends Restaurant_Management_System {
     char choice;
+    
+    
      public char enter(){
          System.out.println("...................Do customer wants to enter??.................");
          System.out.println("...................If yes enter Y/y  else N/n.................");
-        
-           
-         
-         Scanner sc = new Scanner(System.in);
-   
+        Scanner sc = new Scanner(System.in);
     choice=sc.next().charAt(0);
-   
       if(choice == 'N' ||choice == 'n'){
       System.out.println("...................customer did not enter restaurant ................");
       choice = 'N' ;
-     
       }
-     
-         
       else if (choice == 'Y' ||choice == 'y'){
      System.out.println("...................customers enters restaurant.................");
      choice = 'Y' ;
      }
-    
-     
      else
      {
-            System.out.println("...................invalid option select correct option.................");
-           enter();
-          
+       System.out.println("...................invalid option select correct option.................");
+        enter();
      }
       return choice ;
 
@@ -50,15 +41,11 @@ public class Customer {
          System.out.println(" Customer gives the order" );  
 
      }
+     
      void eat(){
                          System.out.println("customer eats the food" );  
 
      }
      
-     void pay(){
-                         System.out.println(" customer pays the bill and leaves the restaurant" );  
-
-     }
-     
-     
+    
 }

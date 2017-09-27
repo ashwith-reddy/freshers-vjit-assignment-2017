@@ -1,6 +1,6 @@
-Chilli_paneer 100
-Gobi_manchuria 100
-Veg_manchuria 100
-Chicken_manchuria 130
-Chilli_chicken 130
-Chicken_65 130
+1.Chilli_paneer 100
+2.Gobi_manchuria 100
+3.Veg_manchuria 100
+4.Chicken_manchuria 130
+5.Chilli_chicken 130
+6.Chicken_65 130

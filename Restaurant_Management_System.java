@@ -31,6 +31,7 @@ public class Restaurant_Management_System {
     public static void main(String[] args)throws FileNotFoundException,IOException,NoSuchElementException{
          //char choice1;
         int req_chairs,c;
+        float bill;
         
         
          Customer customer1;
@@ -81,7 +82,13 @@ public class Restaurant_Management_System {
         
         customer1.eat();
         mngr1.bill();
-        customer1.pay();
+        Bill b=new Bill();
+        bill=b.generate();
+        
+       System.out.println(" customer pays the bill "+bill+" and leaves the restaurant" );  
+
+        
+       
 
         
       
