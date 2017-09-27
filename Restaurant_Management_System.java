@@ -32,7 +32,7 @@ public class Restaurant_Management_System {
          //char choice1;
         int req_chairs,c;
         float bill;
-        
+        String order;
         
          Customer customer1;
         customer1 = new Customer();
@@ -56,7 +56,7 @@ public class Restaurant_Management_System {
         b1.lay_cloth();
         b1.serve_water();
         
-        System.out.println(" Manager Comes to table to take order" );  
+        System.out.println(" Manager Comes to table to take order");  
         
         
         Menu m1 = new Menu(); 
@@ -71,6 +71,7 @@ public class Restaurant_Management_System {
         mngr1.forward();
         
         ExecutiveChef ec= new ExecutiveChef();
+        System.out.println("Exectutive chef looks at the order  "+ customer1.order );
         ec.assign();
 
         LineChef lc= new LineChef();

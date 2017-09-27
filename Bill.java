@@ -9,19 +9,21 @@ import java.util.Scanner;
 /**
  *
  * @author Ashwith
- */
-public class Bill {
-   char choice;
-   int c;
-   float b=0;
-    float generate(){
-    System.out.println("Manager starts calculates the Bill");
-    Scanner sc = new Scanner(System.in);
+ */ 
+public class Bill
+{
+  char choice;
+  int c;
+  float b=0;
+  float generate(){
+  System.out.println("Manager starts calculating the Bill");
+  Scanner sc = new Scanner(System.in);
     
     
     System.out.println("starters ordered? Y/N");
     choice=sc.next().charAt(0);
-        if(choice == 'Y' ||choice == 'y'){
+        if(choice == 'Y' ||choice == 'y')
+        {
             c = sc.nextInt();
             if(c == 1|| c == 2|| c== 3)
             {
@@ -30,14 +32,15 @@ public class Bill {
           else if ( c == 4 || c==5 || c==6){
                 b=b+130;
                }
-        else
+          else
            System.out.println("No starters selected");
+        }
             
             
-            
-            System.out.println("main dishes ordered? Y/N");
-            choice=sc.next().charAt(0);
-        if(choice == 'Y' ||choice == 'y'){
+    System.out.println("main dishes ordered? Y/N");
+    choice=sc.next().charAt(0);
+        if(choice == 'Y' ||choice == 'y')
+        {
             c = sc.nextInt();
             if(c == 7)
             {
@@ -52,11 +55,12 @@ public class Bill {
         else
            System.out.println("No main dish selected");
             
+        }
             
-            
-            System.out.println("desserts  ordered? Y/N");
-            choice=sc.next().charAt(0);
-        if(choice == 'Y' ||choice == 'y'){
+    System.out.println("desserts  ordered? Y/N");
+    choice=sc.next().charAt(0);
+        if(choice == 'Y' ||choice == 'y')
+        {
             c = sc.nextInt();
             
          if ( c == 11 || c==12){
@@ -65,10 +69,12 @@ public class Bill {
         else
            System.out.println("No desserts selected");
          
-         
-          System.out.println("beverages  ordered? Y/N");
-            choice=sc.next().charAt(0);
-        if(choice == 'Y' ||choice == 'y'){
+        }
+        
+    System.out.println("beverages  ordered? Y/N");
+    choice=sc.next().charAt(0);
+        if(choice == 'Y' ||choice == 'y')
+        {
             c = sc.nextInt();
             
          if ( c == 13 || c==14 || c == 15 || c==16){
@@ -77,16 +83,11 @@ public class Bill {
         else
            System.out.println("No beverages selected");
              
-         
+        }
          
          
           System.out.println("Bill is "+b);
 
-       
-    }
-    
-}
-}
-}
-    return b; }
+    return b;
+  }
 }

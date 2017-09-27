@@ -33,7 +33,10 @@ public class Menu extends Restaurant_Management_System { static HashMap<String,S
            case 3:  br2 = new BufferedReader(new FileReader("C:\\Users\\Ashwith\\Documents\\NetBeansProjects\\Restaurant_Management_System\\src\\restaurant_management_system\\desserts.txt"));
           
            case 4:  br3 = new BufferedReader(new FileReader("C:\\Users\\Ashwith\\Documents\\NetBeansProjects\\Restaurant_Management_System\\src\\restaurant_management_system\\beverages.txt"));
-          
+           
+           default:
+           System.out.println("Entered a wrong choice");
+
           // default:
             //System.out.println("You Entered wrong Choice");
             //display();

@@ -6,6 +6,7 @@
 package restaurant_management_system;
 
 import java.util.Scanner;
+import java.io.*;
 
 /**
  *
@@ -13,6 +14,8 @@ import java.util.Scanner;
  */
 public class Customer extends Restaurant_Management_System {
     char choice;
+    int n,i;
+    String order=" ";
     
     
      public char enter(){
@@ -36,12 +39,33 @@ public class Customer extends Restaurant_Management_System {
       return choice ;
 
  }
-    
+     
      void look(){
-         System.out.println(" Customer gives the order" );  
+         System.out.println(" Customer gives the order" ); 
+       System.out.println(" number of items to order:" );
+      Scanner sc = new Scanner(System.in);
+       n = sc.nextInt();
+       for(i=0;i<=n;i++)
+       {
+          
+         order=order+"  "+sc.nextLine();
+         
+          
+       }
+      System.out.println("order is :"+order );
+       //o(order);
+         
+         
 
      }
      
+    /* String o(String s)
+     {
+              System.out.println("test:" );
+
+              return order;
+     }
+     */
      void eat(){
                          System.out.println("customer eats the food" );  
 
