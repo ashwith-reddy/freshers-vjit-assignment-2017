@@ -21,7 +21,7 @@ public class Manager {
     }
     
     void bill(){
-                        System.out.println(" manager produces bill to the customer" );  
+                        System.out.println(" Now manager needs to produces the  bill to the customer" );  
 
     }
     

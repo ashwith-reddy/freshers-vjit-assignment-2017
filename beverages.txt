@@ -1,1 +1,4 @@
-1.Coke/2.Thumps_up/3.Sprite/4.Maaza 60
+13.Coke 60
+14.Thumps_up 60
+15.Sprite 60
+16.Maaza 60

@@ -1,2 +1,2 @@
-1.Double_ka_meetha 80
-2.Kurbani_ka_meetha 80
+11.Double_ka_meetha 80
+12.Kurbani_ka_meetha 80
