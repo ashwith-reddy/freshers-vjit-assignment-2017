@@ -7,7 +7,6 @@ import java.util.*;
 import java.io.*;
 
 
-
 public class Menu extends Restaurant_Management_System { static HashMap<String,String> map1 =new HashMap<String,String>();
        BufferedReader br = null;
      BufferedReader br1 = null;

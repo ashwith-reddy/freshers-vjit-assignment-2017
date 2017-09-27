@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package restaurant_management_system;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.NoSuchElementException;
 
-/**
- *
- * @author Ashwith
- */
 
 
 import java.util.Scanner;
@@ -21,10 +13,7 @@ import java.util.Scanner;
 
 public class Restaurant_Management_System {
 
-    /**
-     * @param args the command line arguments
-     */
-    
+   
     
     
     
@@ -96,7 +85,6 @@ public class Restaurant_Management_System {
         
                                  System.out.println(" \t\t\t\t\t\t\tcustomer pays the bill "+bill+" and leaves the restaurant\n\n\n\n\n" );  
 
-        
         }
                     else
                   System.out.println("\t\t\t\t\t...................customer did not enter restaurant .......................\n\n\n\n\n");
