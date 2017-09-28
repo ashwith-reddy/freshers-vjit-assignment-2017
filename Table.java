@@ -13,13 +13,13 @@ public class Table extends Restaurant_Management_System {
     int tables(){
         
      
-          System.out.println("\t\t Now Customer will reply the no of people");  
+          System.out.println(" \n CUSTOMER: ");  
           chairs =sc.nextInt();
         return this.chairs;
     }
     int available(){
                       
-              System.out.println("\t\t Host looks at the available Table and chairs");  
+              System.out.println("HOST : OK SIR ,CURRENTLY WE CAN SERVE");  
           chairs =sc.nextInt();
         return this.chairs;        
         }

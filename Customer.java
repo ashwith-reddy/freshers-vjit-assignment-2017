@@ -6,13 +6,13 @@ public class Customer extends Restaurant_Management_System {
     int c,c1,n,i;
     float b=0;
     String order=" ";
-  
-     void look(){
-         System.out.println(" \t\t\tCustomer gives the order\n\n" ); 
-         
+ 
+     void look() throws InterruptedException{
+         System.out.println(" \n\n\n\nCustomer gives the order:\n\n" ); 
+         Thread.sleep(2000);
      }
      void eat(){
-                         System.out.println("\t\t\t\t\tcustomer eats the food\n\n\n\n" );  
+                         System.out.println("\n customer eats the food" );  
 
      }
      

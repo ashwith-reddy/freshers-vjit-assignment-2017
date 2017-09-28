@@ -14,19 +14,21 @@ import java.util.Scanner;
 public class Restaurant_Management_System {
 
    
-    public void AllocateChairsForCustomers(int req_chairs,Customer customer1) throws IOException {
+    public void AllocateChairsForCustomers(int req_chairs,Customer customer1) throws IOException, InterruptedException {
         BufferedReader br;
         String t;
         float b1;
-                            System.out.println("\t\t\t\t\t Host arranges "+ req_chairs + "  chairs and leaves\n\n\n\n" );  
-        
-        
-                         BusBoy bb= new BusBoy();
-                         bb.clean_table();
-                         bb.lay_cloth();
-                         bb.serve_water();
-        
-                     System.out.println(" \t\t\t\t\tManager Comes to table to take order\n\n\n\n");  
+                      System.out.println("HOST ARRANGES "+ req_chairs + "  CHAIRS AND LEAVES\n\n\n\n" );  
+                         Thread.sleep(2000);
+                      BusBoy bb= new BusBoy();
+                       bb.clean_table();
+                       Thread.sleep(2000);
+                       bb.lay_cloth();
+                       Thread.sleep(2000);
+                       bb.serve_water();
+                       Thread.sleep(2000);
+       
+                     System.out.println(" Manager Comes to table to take order");  
         
         
                      Menu m1 = new Menu(); 
@@ -36,31 +38,44 @@ public class Restaurant_Management_System {
         
                      customer1.look();
                      br = new BufferedReader(new FileReader("C:\\Users\\Ashwith\\Documents\\NetBeansProjects\\Restaurant_Management_System\\src\\restaurant_management_system\\order.txt"));
-                     while((t=br.readLine())!=null){
-                        System.out.println( t +"\n"  );
-                                             }
+                                    while((t=br.readLine())!=null){
+                                                                System.out.println( t +"\n"  );
+                                                                  }
                  Manager mngr1 = new Manager();
                  mngr1.take_order();
+                 Thread.sleep(2000);
                      mngr1.forward();
+                     Thread.sleep(2000);
         
                      ExecutiveChef ec= new ExecutiveChef();
                      ec.assign();
-
+                        Thread.sleep(2000);
+                        
                         LineChef lc= new LineChef();
                         lc.prepare();
+                        Thread.sleep(2000);
         
         
                      Server s1 = new Server();
                      s1.serve();
+                     Thread.sleep(2000);
         
                                 customer1.eat();
+                                Thread.sleep(2000);
+                                Thread.sleep(2000);
+                                
+                                
                              mngr1.bill();
+                             
+                             
                          Bill b=new Bill();
                              b1=b.generate();
-                                 System.out.println(" \t\t\t\t\t\t\t bill is :"+b1 );  
+                                 System.out.println(" \n\nManager gives the bill of :"+b1 );  
 
-                                 System.out.println(" \t\t\t\t\t\t\tcustomer pays the bill "+b1+" and leaves the restaurant\n\n\n\n\n" );  
+                                 System.out.println("\n\ncustomer pays the bill "+b1+" and leaves the table" );  
+                                 Thread.sleep(2000);
                                  bb.clean_table();
+                                 Thread.sleep(2000);
 
                                  new DoorBoy().exit_greeting();
                                  
@@ -79,16 +94,16 @@ public class Restaurant_Management_System {
 
         Scanner sc = new Scanner(System.in);
         Restaurant_Management_System rms = new Restaurant_Management_System();
-         System.out.println("\t\t\t\t\t\tIs time is betwwen 12pm-10pm?\n\n\n ");
-         System.out.println("\t\t\t\t...................If yes enter Y/y  else N/n................... \n\n\n");
+         System.out.println("\n\n\t\t\t\t\t\t IS THE TIME BETWEEN 12pm-10pm?\n ");
+         System.out.println("IF YES ENTER Y/y  ELSE N/n  \n");
         choice=sc.next().charAt(0);
         if (choice == 'Y' ||choice == 'y'){
-     System.out.println("\t\t\t\t\t...................customer enters restaurant.................\n\n\n\n");
-        
+                                  Thread.sleep(2000);
+                  System.out.println("\n CUSTOMER ENTERS THE RESTAURANT");
+                              Thread.sleep(2000);
                 DoorBoy db = new DoorBoy();
                 db.entrance_greeting();
-        
-        
+                              Thread.sleep(2000);
                  Host host1 = new Host();
                  host1.receive();
                   
@@ -101,15 +116,17 @@ public class Restaurant_Management_System {
                     }
                  
                     else{
-                         System.out.println("Host asks the customere to wait for some time in waiting area");  
-                      System.out.println("Please wait for some time.....");
-                      Thread.sleep(2000);
+                        Thread.sleep(2000);
+                         System.out.println("\n PLEASE WAIT FOR SOME TIME IN WAITING AREA SIR");  
+                         Thread.sleep(2000);
+                      System.out.println("WHEN TABLE IS AVAILABLE");
+             
                       rms.AllocateChairsForCustomers(req_chairs, customer1);
-                   //Rey Execute chesi check cheywait
+                   
                     }
         }
                     else
-                  System.out.println("\t\t\t\t\t...................restaurant is closed .......................\n\n\n\n\n");
+                  System.out.println("RESTAURANT IS CLOSE");
 
        
    

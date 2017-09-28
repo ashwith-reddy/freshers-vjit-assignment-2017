@@ -8,7 +8,7 @@ public class Bill
  
   int c,c1;
   float b1;
-  float generate(){
+  float generate() throws InterruptedException{
 
   Scanner sc = new Scanner(System.in);
                System.out.println("enter the item code ");
@@ -41,14 +41,15 @@ public class Bill
             {
                 b1=b1+80;
                }  
-                System.out.println(" \t\t\t enter  0 if more " );
+                System.out.println("  enter  0 if more were ordered else enter any other " );
 
                   c1 = sc.next().charAt(0); 
                   if(c1=='0'){
                    this.generate();
                   }
                   else{
-                   System.out.println("\t\t\t\t\t End of Order\n\n\n\n" );  
+                   System.out.println(" End of Order" );  
+                   Thread.sleep(2000);
                   }
                                  
         

@@ -6,7 +6,7 @@ public class LineChef extends Restaurant_Management_System  {
     
     void prepare(){
         
-                System.out.println("\t\t\t\t\t\t line chefs prepares \n" );  
+                System.out.println(" line chefs prepares the order" );  
 
     }
     
