@@ -2,9 +2,11 @@
 package restaurant_management_system;
 
 
-public class LineChef {
+public class LineChef extends Restaurant_Management_System  {
+    
     void prepare(){
-                System.out.println("\t\t\t\t\t\t line chef prepares the ordered food\n\n\n" );  
+        
+                System.out.println("\t\t\t\t\t\t line chefs prepares \n" );  
 
     }
     
