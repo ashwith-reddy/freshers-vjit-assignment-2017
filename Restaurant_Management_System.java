@@ -19,9 +19,9 @@ public class Restaurant_Management_System {
     
     public static void main(String[] args)throws FileNotFoundException,IOException,NoSuchElementException{
          char choice;
-        int req_chairs,c;
-        float bill;
-        String order;
+        int req_chairs,c,m;
+        float b1,cr;
+        String order,or;
         
          Customer customer1;
         customer1 = new Customer();
@@ -33,8 +33,6 @@ public class Restaurant_Management_System {
         choice=sc.next().charAt(0);
         if (choice == 'Y' ||choice == 'y'){
      System.out.println("\t\t\t\t\t...................customer enters restaurant.................\n\n\n\n");
-        
-               //char choice1 = customer1.enter();
         
                 DoorBoy db = new DoorBoy();
                 db.entrance_greeting();
@@ -48,10 +46,10 @@ public class Restaurant_Management_System {
                     System.out.println("\t\t\t\t\t Host arranges "+ req_chairs + "  chairs and leaves\n\n\n\n" );  
         
         
-                         BusBoy b1= new BusBoy();
-                         b1.clean_table();
-                         b1.lay_cloth();
-                         b1.serve_water();
+                         BusBoy bb= new BusBoy();
+                         bb.clean_table();
+                         bb.lay_cloth();
+                         bb.serve_water();
         
                      System.out.println(" \t\t\t\t\tManager Comes to table to take order\n\n\n\n");  
         
@@ -62,13 +60,13 @@ public class Restaurant_Management_System {
         
         
                      customer1.look();
+                   
         
                  Manager mngr1 = new Manager();
                  mngr1.take_order();
                      mngr1.forward();
         
                      ExecutiveChef ec= new ExecutiveChef();
-                     System.out.println("\t\t\t\t\tExectutive chef looks at the order  "+ customer1.order +"\n\n\n\n\n");
                      ec.assign();
 
                         LineChef lc= new LineChef();
@@ -81,24 +79,23 @@ public class Restaurant_Management_System {
                                 customer1.eat();
                              mngr1.bill();
                          Bill b=new Bill();
-                             bill=b.generate();
+                             b1=b.generate();
         
-                                 System.out.println(" \t\t\t\t\t\t\tcustomer pays the bill "+bill+" and leaves the restaurant\n\n\n\n\n" );  
+                                 System.out.println(" \t\t\t\t\t\t\tcustomer pays the bill "+b1+" and leaves the restaurant\n\n\n\n\n" );  
 
+                                 db.exit_greeting();
+         
+                        
         }
                     else
                   System.out.println("\t\t\t\t\t...................customer did not enter restaurant .......................\n\n\n\n\n");
 
-        
-      
-    
-        
        
-     
-       
-    }
+   
+
 
     
+}
 }
 
 

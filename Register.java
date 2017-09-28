@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package restaurant_management_system;
 
-/**
- *
- * @author Ashwith
- */
-public class Register {
+public class Register extends Restaurant_Management_System {
+    String total_orders,ord;
+    float total_cash,b1;
+    void order_register(){
+        
+       
+    }
     
+     void cash_register(){
+       
+    }
 }
