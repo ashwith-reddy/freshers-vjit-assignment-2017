@@ -11,7 +11,7 @@ public class DoorBoy extends Restaurant_Management_System  {
     
     void exit_greeting()
     {
-        System.out.println("\t\t\t\t\t.................................DoorBoy : "+"Have A Nice Day Sir"+"................................\n\n\n");
+        System.out.println("\t\t\t\t\t..................................DoorBoy : "+"Have A Nice Day Sir"+"................................\n\n\n");
     }
     
 }

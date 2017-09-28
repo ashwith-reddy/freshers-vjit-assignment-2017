@@ -14,40 +14,11 @@ import java.util.Scanner;
 public class Restaurant_Management_System {
 
    
-    
-    
-    
-    public static void main(String[] args)throws FileNotFoundException,IOException,NoSuchElementException{
-         char choice;
-        int req_chairs,c,m,ac;
-        float b1,cr;
-        String order,or,t;
-        
-         Customer customer1;
-        customer1 = new Customer();
-               BufferedReader br = null;
-
-        Scanner sc = new Scanner(System.in);
-    
-         System.out.println("\t\t\t\t\t\tDo customer wants to enter??\n\n\n");
-         System.out.println("\t\t\t\t...................If yes enter Y/y  else N/n................... \n\n\n");
-        choice=sc.next().charAt(0);
-        if (choice == 'Y' ||choice == 'y'){
-     System.out.println("\t\t\t\t\t...................customer enters restaurant.................\n\n\n\n");
-        
-                DoorBoy db = new DoorBoy();
-                db.entrance_greeting();
-        
-        
-                 Host host1 = new Host();
-                 host1.receive();
-                 
-                    Table table1 = new Table();
-                    req_chairs = table1.tables();
-                    ac = table1.available();
-                    
-                    if(ac>req_chairs){
-                    System.out.println("\t\t\t\t\t Host arranges "+ req_chairs + "  chairs and leaves\n\n\n\n" );  
+    public void AllocateChairsForCustomers(int req_chairs,Customer customer1) throws IOException {
+        BufferedReader br;
+        String t;
+        float b1;
+                            System.out.println("\t\t\t\t\t Host arranges "+ req_chairs + "  chairs and leaves\n\n\n\n" );  
         
         
                          BusBoy bb= new BusBoy();
@@ -89,18 +60,56 @@ public class Restaurant_Management_System {
                                  System.out.println(" \t\t\t\t\t\t\t bill is :"+b1 );  
 
                                  System.out.println(" \t\t\t\t\t\t\tcustomer pays the bill "+b1+" and leaves the restaurant\n\n\n\n\n" );  
+                                 bb.clean_table();
 
-                                 db.exit_greeting();
+                                 new DoorBoy().exit_greeting();
+                                 
+    }
+    
+    
+    public static void main(String[] args)throws FileNotFoundException,IOException,NoSuchElementException, InterruptedException{
+         char choice;
+        int req_chairs,c,m,ac;
+        float b1,cr;
+        String order,or,t;
+        
+         Customer customer1;
+        customer1 = new Customer();
+               BufferedReader br = null;
+
+        Scanner sc = new Scanner(System.in);
+        Restaurant_Management_System rms = new Restaurant_Management_System();
+         System.out.println("\t\t\t\t\t\tIs time is betwwen 12pm-10pm?\n\n\n ");
+         System.out.println("\t\t\t\t...................If yes enter Y/y  else N/n................... \n\n\n");
+        choice=sc.next().charAt(0);
+        if (choice == 'Y' ||choice == 'y'){
+     System.out.println("\t\t\t\t\t...................customer enters restaurant.................\n\n\n\n");
+        
+                DoorBoy db = new DoorBoy();
+                db.entrance_greeting();
+        
+        
+                 Host host1 = new Host();
+                 host1.receive();
+                  
+                    Table table1 = new Table();
+                    req_chairs = table1.tables();
+                    ac = table1.available();
+                    
+                    if(ac>req_chairs){
+                          rms.AllocateChairsForCustomers(req_chairs,customer1);
                     }
                  
                     else{
                          System.out.println("Host asks the customere to wait for some time in waiting area");  
-                
-                    
+                      System.out.println("Please wait for some time.....");
+                      Thread.sleep(2000);
+                      rms.AllocateChairsForCustomers(req_chairs, customer1);
+                   //Rey Execute chesi check cheywait
                     }
         }
                     else
-                  System.out.println("\t\t\t\t\t...................customer did not enter restaurant .......................\n\n\n\n\n");
+                  System.out.println("\t\t\t\t\t...................restaurant is closed .......................\n\n\n\n\n");
 
        
    
