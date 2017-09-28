@@ -70,18 +70,19 @@ public class Restaurant_Management_System {
                              
                          Bill b=new Bill();
                              b1=b.generate();
+                            
                                  System.out.println(" \n\nManager gives the bill of :"+b1 );  
 
                                  System.out.println("\n\ncustomer pays the bill "+b1+" and leaves the table" );  
                                  Thread.sleep(2000);
                                  bb.clean_table();
                                  Thread.sleep(2000);
-
+                               Register r = new Register();
+                               r.counter_register();
                                  new DoorBoy().exit_greeting();
                                  
     }
-    
-    
+   
     public static void main(String[] args)throws FileNotFoundException,IOException,NoSuchElementException, InterruptedException{
          char choice;
         int req_chairs,c,m,ac;
@@ -94,7 +95,7 @@ public class Restaurant_Management_System {
 
         Scanner sc = new Scanner(System.in);
         Restaurant_Management_System rms = new Restaurant_Management_System();
-         System.out.println("\n\n\t\t\t\t\t\t IS THE TIME BETWEEN 12pm-10pm?\n ");
+         System.out.println("\n\n\t\t\t\t\t\t IS THE TIME BETWEEN 10am-10pm?\n ");
          System.out.println("IF YES ENTER Y/y  ELSE N/n  \n");
         choice=sc.next().charAt(0);
         if (choice == 'Y' ||choice == 'y'){

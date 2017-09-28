@@ -2,14 +2,15 @@
 package restaurant_management_system;
 
 public class Register extends Restaurant_Management_System {
-    String total_orders,ord;
-    float total_cash,b1;
-    void order_register(){
+  
+   // float total_cash,b1;
+ 
+     void counter_register() throws InterruptedException{
         
-       
-    }
-    
-     void cash_register(){
-       
+         
+        System.out.println(" \n cash is registered in to counter" );  
+        
+                                        Thread.sleep(2000);
+
     }
 }

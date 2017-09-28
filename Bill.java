@@ -9,7 +9,7 @@ public class Bill
   int c,c1;
   float b1;
   float generate() throws InterruptedException{
-
+      
   Scanner sc = new Scanner(System.in);
                System.out.println("enter the item code ");
 
